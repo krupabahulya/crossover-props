@@ -4,7 +4,6 @@
 
 Let's walk through how to create a class component, check out the code example below:
 
-
 :green_book:
 
 ```javascript
@@ -35,7 +34,6 @@ export default App;
 So there you have it, your very first React class component! :star_struck:
 
 ## How to pass props between class components
-
 
 So there you have it, your very first React class component!
 
@@ -80,3 +78,12 @@ export default Car;
 
 ```
 
+## Go further
+
+Some helpful resources for you to read more about react function components:
+
+1. (https://www.digitalocean.com/community/tutorials/react-class-components)
+2. (https://buddy.works/tutorials/react-cheat-sheet-for-beginners#class-components)
+3. (https://www.robinwieruch.de/react-pass-props-to-component/)
+4. (https://reactjs.org/docs/components-and-props.html)
+5. (https://www.geeksforgeeks.org/reactjs-class-based-components/)
