@@ -1,4 +1,6 @@
-[![React Logo](https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png)](https://reactjs.org/docs/components-and-props.html)
+<img src ="https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png" width="200" height="200" position = center/>
+
+[React Components and Props](https://reactjs.org/docs/components-and-props.html)
 
 # React - Components and Props
 
