@@ -4,7 +4,7 @@
 
 Let's walk through how to create a class component, check out the code example below:
 
-```javascript
+```sh
 import React from "react";
 
 class MyFirstClassComponent extends React.Component {
@@ -30,3 +30,44 @@ Next, we have the keyword **extends** followed by React.Component. Here we are e
 The final part of our class component is the render method. The render method needs to return JSX, and a single top-level tag should wrap the entire content (section).
 
 So there you have it, your very first React class component!
+
+## Props
+
+Another way of handling component properties is by using props.
+Props are like function arguments, and you send them into the component as attributes.
+
+Use an attribute to pass a color to the Car component, and use it in the render() function:
+
+```sh
+import React from "react";
+
+class Car extends React.Component {
+  render() {
+    return <h2>I am a {this.props.color} Car!</h2>;
+    <Car color="red" />;
+  }
+}
+export default Car;
+```
+
+## Props in the Constructor
+
+If your component has a constructor function, the props should always be passed to the constructor and also to the React.Component via the super() method.
+
+```sh
+
+import React from "react";
+class Car extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return <h2>I am a {this.props.model}!</h2>;
+    <Car model="Mustang" />;
+  }
+}
+
+export default Car;
+
+
+```
