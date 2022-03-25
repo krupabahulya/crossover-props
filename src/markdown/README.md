@@ -1,4 +1,4 @@
-<img src ="https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png" width="200" height="200" position = center/>
+<img src ="https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png" width="200" height="200"/>
 
 [React Components and Props](https://reactjs.org/docs/components-and-props.html)
 
@@ -12,6 +12,10 @@ We'll be going over all the topics from the beginning with a more profound overv
 It's been a lot to take in when we started learning React. And all the documentation we find is very confusing most of the time, right?
 The most we research, the lost we get, since we have so much information nowadays.
 We might assume that you already know about properties in React, but if not, no worries. Let's dive in together! 😎
+
+## What are Components?
+
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components.
 
 ## What's Props?
 
