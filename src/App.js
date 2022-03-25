@@ -7,16 +7,31 @@ import { Container, Row, Col, ListGroup } from "react-bootstrap";
 function App() {
   const initialMarkdownFile = "./markdown/README.md";
 
+  const [selectedTopic, setSelectedTopic] = useState({
+    id: "1",
+    topic: "README.md",
+    sourcefile: "./markdown/README.md",
+  });
+
   const allMarkdownFiles = [
-    { filename: "README.md", source: "./markdown/README.md" },
-    { filename: "Components1.md", source: "./markdown/Components1.md" },
-    { filename: "Components2.md", source: "./markdown/Components2.md" },
+    { id: "1", topic: "README.md", sourcefile: "./markdown/README.md" },
+    {
+      id: "2",
+      topic: "Components1.md",
+      sourcefile: "./markdown/Components1.md",
+    },
+    {
+      id: "3",
+      topic: "Components2.md",
+      sourcefile: "./markdown/Components2.md",
+    },
   ];
   const [mdcontent, setMdcontent] = useState("");
+  // console.log("initial mdcontent: ", mdcontent);
 
   // import all md-files at page load
   useEffect(() => {
-    import(`${initialMarkdownFile}`)
+    import(selectedTopic.sourcefile)
       .then((res) => {
         fetch(res.default)
           .then((res) => res.text())
@@ -24,11 +39,16 @@ function App() {
           .catch((err) => console.log(err));
       })
       .catch((err) => console.log(err));
-  });
+  }, [selectedTopic]);
 
-  // handler to select md file
-  const selectMd = () => {
-    console.log("select the md file");
+  const handleSelectedTopic = (event) => {
+    setSelectedTopic(
+      allMarkdownFiles.find((file) => file.id === event.target.id)
+    );
+    console.log("selected topic: ", selectedTopic.topic);
+    console.log("selected sourcefile: ", selectedTopic.sourcefile);
+    //setMdcontent(require("selectedTopic.sourcefile"));
+    // setMdcontent(selectedTopic.sourcefile);
   };
 
   return (
@@ -46,14 +66,29 @@ function App() {
               <Col sm={4}>
                 <section className='menu'>
                   <ListGroup as='ol' numbered>
-                    <ListGroup.Item action onClick={selectMd} href='#link1'>
-                      {allMarkdownFiles[0].filename}
+                    <ListGroup.Item
+                      id='1'
+                      action
+                      onClick={handleSelectedTopic}
+                      href='#link1'
+                    >
+                      {allMarkdownFiles[0].topic}
                     </ListGroup.Item>
-                    <ListGroup.Item action onClick={selectMd} href='#link2'>
-                      {allMarkdownFiles[1].filename}
+                    <ListGroup.Item
+                      id='2'
+                      action
+                      onClick={handleSelectedTopic}
+                      href='#link2'
+                    >
+                      {allMarkdownFiles[1].topic}
                     </ListGroup.Item>
-                    <ListGroup.Item action onClick={selectMd} href='#link3'>
-                      {allMarkdownFiles[2].filename}
+                    <ListGroup.Item
+                      id='3'
+                      action
+                      onClick={handleSelectedTopic}
+                      href='#link3'
+                    >
+                      {allMarkdownFiles[2].topic}
                     </ListGroup.Item>
                   </ListGroup>
                 </section>
