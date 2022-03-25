@@ -1,71 +1,29 @@
-# Getting Started with Create React App
+[![React Logo](https://brandlogos.net/wp-content/uploads/2020/09/react-logo.png)](https://reactjs.org/docs/components-and-props.html)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React - Components and Props
 
-## Available Scripts
+### How do they work 🤔
 
-In the project directory, you can run:
+Are you new to React and want to understand how Components and Props work? So this is the right tutorial for you!
+We'll be going over all the topics from the beginning with a more profound overview of the subject.
 
-### `npm start`
+It's been a lot to take in when we started learning React. And all the documentation we find is very confusing most of the time, right?
+The most we research, the lost we get, since we have so much information nowadays.
+We might assume that you already know about properties in React, but if not, no worries. Let's dive in together! 😎
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## What's Props?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**React is a component-based library** that divides the UI into little reusable pieces. In some cases, those components need to communicate (send data to each other) and the way to pass data between components is by using props.
+**“Props”** is a special keyword in React, which stands for properties and is being used for passing data from one component to another.
+But the important part here is that data with props are being passed in a **uni-directional flow**. (one way from parent to child)
+Furthermore, **props data is read-only**, which means that data coming from the parent **should not be** changed by child components.
+OK now let’s see how to use Props with an example…
 
-### `npm test`
+## Using Props in React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!--- Want to add some examples here --->
 
-### `npm run build`
+<!--- End of the file --->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Want to know more?
+[React Documentation](https://reactjs.org/docs/components-and-props.html)
