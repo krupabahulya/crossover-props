@@ -3,41 +3,41 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, ListGroup } from "react-bootstrap";
+import README from "./markdown/README.md";
+import Components1 from "./markdown/Components1.md";
+import Components2 from "./markdown/Components2.md";
 
 function App() {
-  const initialMarkdownFile = "./markdown/README.md";
-
+  const [mdcontent, setMdcontent] = useState("");
   const [selectedTopic, setSelectedTopic] = useState({
     id: "1",
     topic: "README.md",
-    sourcefile: "./markdown/README.md",
   });
-
   const allMarkdownFiles = [
-    { id: "1", topic: "README.md", sourcefile: "./markdown/README.md" },
+    { id: "1", topic: "README.md" },
     {
       id: "2",
       topic: "Components1.md",
-      sourcefile: "./markdown/Components1.md",
     },
     {
       id: "3",
       topic: "Components2.md",
-      sourcefile: "./markdown/Components2.md",
     },
   ];
-  const [mdcontent, setMdcontent] = useState("");
   // console.log("initial mdcontent: ", mdcontent);
 
-  // import all md-files at page load
   useEffect(() => {
-    import(selectedTopic.sourcefile)
-      .then((res) => {
-        fetch(res.default)
-          .then((res) => res.text())
-          .then((res) => setMdcontent(res))
-          .catch((err) => console.log(err));
-      })
+    let content;
+    if (selectedTopic.topic === "README.md") {
+      content = fetch(README);
+    } else if (selectedTopic.topic === "Components1.md") {
+      content = fetch(Components1);
+    } else if (selectedTopic.topic === "Components2.md") {
+      content = fetch(Components2);
+    }
+    content
+      .then((res) => res.text())
+      .then((data) => setMdcontent(data))
       .catch((err) => console.log(err));
   }, [selectedTopic]);
 
